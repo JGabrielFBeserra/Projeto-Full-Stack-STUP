@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<title>STUP | ADM | INDEX</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="/css/css-adm/template/assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/css-adm/template/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/css-adm/template/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/css/css-adm/template/assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="/css/css-adm/template/assets/css/main.css">
+	<link rel="stylesheet" href="/css/css-adm/template/assets/css/demo.css">
+	<link rel="stylesheet" href="/css/css-adm/template/assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/icon-title.svg">
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="/adm"><img src="/images/adm-stup-logo.png" alt="Stup Logo" class="img-responsive logo"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i
+							class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<form class="navbar-form navbar-left">
+
+				</form>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="/adm" class="active"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
+						<li><a href="/adm/recarga" class=""><i class="lnr lnr-cart"></i> <span>Recarga</span></a></li>
+						<li>
+							<a href="#cadastros" data-toggle="collapse" class="collapsed"><i
+									class="lnr lnr-file-empty"></i>
+								<span>Cadastros</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="cadastros" class="collapse ">
+								<ul class="nav">
+									<li>
+										<a href="/adm/cliente/cadastrar" class=""><i class="fa fa-credit-card"></i>
+											<span>
+												Cliente
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/adm/motorista/cadastrar" class=""><i class="fa-solid fa-id-card"></i>
+											<span>
+												Motorista
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/adm/linha/cadastrar" class=""><i class="fa fa-map-marker"></i>
+											<span>
+												Linha
+											</span>
+										</a>
+									</li>
+									<li><a href="/adm/usuario/cadastrar" class=""><i class="fa-solid fa-user"></i>
+											<span>
+												Usuário
+											</span>
+										</a>
+									</li>
+									<li><a href="/adm/onibus/cadastrar" class=""><i class="fa-solid fa-bus"></i>
+											<span>
+												Ônibus
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#registros" data-toggle="collapse" class="collapsed"><i
+									class="lnr lnr lnr-pencil"></i>
+								<span>Registros</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="registros" class="collapse ">
+								<ul class="nav">
+									<li>
+										<a href="/adm/cliente/registro" class=""><i class="fa fa-credit-card"></i>
+											<span>
+												Cliente
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/adm/motorista/registro" class=""><i class="fa-solid fa-id-card"></i>
+											<span>
+												Motorista
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/adm/linha/registro" class=""><i class="fa fa-map-marker"></i>
+											<span>
+												Linha
+											</span>
+										</a>
+									</li>
+									<li><a href="/adm/usuario/registro" class=""><i class="fa-solid fa-user"></i>
+											<span>
+												Usuário
+											</span>
+										</a>
+									</li>
+									<li><a href="/adm/onibus/registro" class=""><i class="fa-solid fa-bus"></i>
+											<span>
+												Ônibus
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#relatorios" data-toggle="collapse" class="collapsed"><i
+									class="fa fa-calendar"></i>
+								<span>Relatórios</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="relatorios" class="collapse ">
+								<ul class="nav">
+									<li>
+										<a href="/adm/cliente/cadastrar" class=""><i class="fa fa-credit-card"></i>
+											<span>
+												Cliente
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/adm/motorista/cadastrar" class=""><i class="fa-solid fa-id-card"></i>
+											<span>
+												Motorista
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/adm/linha/cadastrar" class=""><i class="fa fa-map-marker"></i>
+											<span>
+												Linha
+											</span>
+										</a>
+									</li>
+									<li><a href="/adm/usuario/cadastrar" class=""><i class="fa-solid fa-user"></i>
+											<span>
+												Usuário
+											</span>
+										</a>
+									</li>
+									<li><a href="/adm/onibus/cadastrar" class=""><i class="fa-solid fa-bus"></i>
+											<span>
+												Ônibus
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<!-- OVERVIEW -->
+					<div class="row">
+						<div class="panel panel-headline">
+							<div class="panel-heading">
+								<h3 class="panel-title" style="font-size: 30px;">Home Administrativa</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="metric">
+											<a href="/adm/cliente/registro">
+												<span class="icon"><i class="fa fa-user"></i></span>
+												<p>
+													<span class="number" id="clientesCount">0</span>
+													<span class="title">Clientes STUP Ativos</span>
+												</p>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="metric">
+											<a href="/adm/motorista/registro">
+												<span class="icon"><i class="fa fa-credit-card"></i></span>
+												<p>
+													<span class="number" id="motoristasCount">0</span>
+													<span class="title">Motoristas Cadastrados</span>
+												</p>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="metric">
+											<a href="/adm/linhas/registro">
+												<span class="icon"><i class="fa fa-bar-chart"></i></span>
+												<p>
+													<span class="number" id="linhasCount">0</span>
+													<span class="title">Linhas Cadastradas</span>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="panel panel-headline">
+							<div class="panel-heading">
+								<h3 class="panel-title">Estatísticas da Utilização do Passes</h3>
+							</div>
+							<div class="panel-body">
+								<div class="col-md-9">
+									<div id="headline-chart" class="ct-chart"></div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="weekly-summary text-right">
+										<span class="number" id="tarifasCount">0</span>
+										<i class="fa-regular fa-credit-card"
+											style="color: #602E9A; font-size: 30px;"></i>
+										<span class="percentage">
+											<i class="fa fa-caret-up text-success"></i>
+										</span>
+										<span class="info-label">Passes Utilizados</span>
+
+									</div>
+									<div class="weekly-summary text-right">
+										<span class="number" id="tarifasTotal">0</span>
+										<i class="fa-solid fa-money-bill" style="color: #602E9A; font-size: 30px;"></i>
+										<span class="percentage">
+											<i class="fa fa-caret-up text-success"></i></span>
+										<span class="info-label"> De Lucro</span>
+									</div>
+									<div class="weekly-summary text-right">
+										<span class="number" id="clienteMenor5">0</span>
+										<i class="fa-solid fa-xmark" style="color: #602E9A; font-size: 30px;"></i>
+										<span class="percentage">
+											<i class="fa fa-caret-down text-danger"></i>
+										</span>
+										<span class="info-label">Passes Inutilisados</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- REGISTROS CLIENTES-->
+					<div class="row">
+						<div class="panel panel-headline">
+							<div class="panel-heading">
+								<h3 class="panel-title">Últimos Clientes Cadastrados</h3>
+							</div>
+							<div class="panel-body">
+								<div class="col-12">
+									<table id="clientesTable" class="table table-bordered">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Nome</th>
+												<th>CPF</th>
+												<th>Uso</th>
+												<th>Saldo</th>
+											</tr>
+										</thead>
+										<tbody>
+
+										</tbody>
+									</table>
+									<div class="row">
+										<div class="col-md-6 text-left">
+											<a href="http://localhost:3001/adm/cliente/registro"
+												class="btn btn-primary">Ver registro completo</a>
+										</div>
+										<div class="col-md-6 text-right">
+											<span class="panel-note"><i class="fa fa-clock-o"></i> Mais Recentes</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="panel panel-headline">
+							<div class="panel-heading">
+								<h3 class="panel-title">Últimas Linhas Cadastradas</h3>
+							</div>
+							<div class="panel-body">
+								<div class="col-12">
+									<table id="linhasTable" class="table table-bordered">
+										<!-- Adicionado um id à tabela -->
+										<thead>
+											<tr>
+												<th>Número</th>
+												<th>Nome</th>
+												<th>Origem</th>
+												<th>Destino</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+									<div class="row">
+										<div class="col-md-6 text-left"><a
+												href="http://localhost:3001/adm/linha/registro"
+												class="btn btn-primary">Ver registro completo</a></div>
+										<div class="col-md-6 text-right">
+											<span class="panel-note"><i class="fa fa-clock-o"></i>
+												Mais Recentes
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="panel panel-headline">
+							<div class="panel-heading">
+								<h3 class="panel-title">Últimos Motoristas Cadastrados</h3>
+							</div>
+							<div class="panel-body">
+								<div class="col-12">
+									<table id="motoristasTable" class="table table-bordered">
+										<!-- Adicionado um id à tabela -->
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Nome Completo</th>
+												<th>CPF</th>
+												<th>Telefone</th>
+											</tr>
+										</thead>
+										<tbody>
+
+										</tbody>
+									</table>
+									<div class="row">
+										<div class="col-md-6 text-left"><a
+												href="http://localhost:3001/adm/motorista/registro"
+												class="btn btn-primary">Ver registro completo</a></div>
+										<div class="col-md-6 text-right">
+											<span class="panel-note"><i class="fa fa-clock-o"></i>
+												Mais Recentes
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- END MULTI CHARTS -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- END MAIN CONTENT -->
+
+	<!-- END MAIN -->
+	<div class="clearfix"></div>
+	<footer>
+		<div class="container-fluid">
+			<p class="copyright">&copy; 2023 <a href="#" target="_blank">STUP</a>.
+				Todos os Direitos Reservados</p>
+		</div>
+	</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="/css/css-adm/template/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/css/css-adm/template/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/css/css-adm/template/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="/css/css-adm/template/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="/css/css-adm/template/assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="/css/css-adm/template/assets/scripts/klorofil-common.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="/js/js-adm/index.js"></script>
+	<script src="https://kit.fontawesome.com/66b39b2469.js" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			var data, options;
+
+			// headline charts
+			data = {
+				labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
+				series: [
+					[111, 25, 18, 34, 29, 38, 1000],
+				]
+			};
+
+			options = {
+				height: 300,
+				showArea: true,
+				showLine: false,
+				showPoint: false,
+				fullWidth: true,
+				axisX: {
+					showGrid: false
+				},
+				lineSmooth: false,
+			};
+
+			new Chartist.Line('#headline-chart', data, options);
+
+
+			options = {
+				fullWidth: true,
+				lineSmooth: false,
+				height: "270px",
+				low: 0,
+				high: 'auto',
+				series: {
+					'series-projection': {
+						showArea: true,
+						showPoint: false,
+						showLine: false
+					},
+				},
+				axisX: {
+					showGrid: false,
+
+				},
+				axisY: {
+					showGrid: false,
+					onlyInteger: true,
+					offset: 0,
+				},
+				chartPadding: {
+					left: 20,
+					right: 20
+				}
+			};
+
+
+
+
+		});
+	</script>
+
+</body>
+
+</html>
