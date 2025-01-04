@@ -6,24 +6,20 @@ const logger = require('morgan');
 const app = express();
 require('dotenv').config();
 
-
-//  aplicativos
-
 const corsOptions = {
-    origin: "http://localhost:3001",
-    optionsSuccessStatus: 200,
-    credentials: true,
-  };
-  app.use(cors(corsOptions));
+  origin: "http://localhost:3001",
+  optionsSuccessStatus: 200,
+  credentials: true,
+};
+app.use(cors(corsOptions));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Servir arquivos estáticos do diretório 'uploads'
 
 // rotas app adm
-
 const clientesRouter = require('./routes/interface-adm/clientes');
 const LinhasRouter = require('./routes/interface-adm/linhas');
 const UsuariosRouter = require('./routes/interface-adm/usuarios');
@@ -32,16 +28,16 @@ const OnibusRouter = require('./routes/interface-adm/onibus');
 const authRouter = require("./routes/interface-adm/auth");
 const adminRouter = require("./routes/interface-adm/admin");
 const ScanRouter = require("./routes/interface-scan/scan");
-const IndexRouter = require("./routes/interface-adm/index")
+const IndexRouter = require("./routes/interface-adm/index");
 
-app.use('/api/linhas', LinhasRouter);
-app.use('/api/index', IndexRouter);
-app.use('/api/clientes', clientesRouter);
-app.use('/api/usuarios', UsuariosRouter);
-app.use('/api/motoristas', MotoristasRouter);
-app.use('/api/onibus', OnibusRouter);
-app.use("/api/auth", authRouter);
-app.use("/api/admin", adminRouter);
-app.use("/api/scan", ScanRouter);
+app.use('/clientes', clientesRouter);
+app.use('/linhas', LinhasRouter);
+app.use('/usuarios', UsuariosRouter);
+app.use('/motoristas', MotoristasRouter);
+app.use('/onibus', OnibusRouter);
+app.use('/auth', authRouter);
+app.use('/admin', adminRouter);
+app.use('/scan', ScanRouter);
+app.use('/index', IndexRouter);
 
-module.exports = app;
+module.exports = app; // Certifique-se de exportar a instância do aplicativo Express

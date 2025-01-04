@@ -1,7 +1,25 @@
 var express = require("express");
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, '../uploads'));
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + '-' + file.originalname);
+  }
+});
+
+
+;
 var router = express.Router();
+
+const upload = multer({ storage: storage });
+module.exports = upload;
 const { PrismaClient } = require("@prisma/client");
-const upload = require("../../middlewares/fileUpload");
+
 const prisma = new PrismaClient();
 
 router.get("/listar", async function (req, res, next) {

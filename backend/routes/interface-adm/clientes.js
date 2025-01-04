@@ -1,25 +1,46 @@
 var express = require("express");
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const uploadDir = path.join(__dirname, '../../uploads');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, uploadDir);
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + '-' + file.originalname);
+  }
+});
+
 var router = express.Router();
+
+const upload = multer({ storage: storage });
 const { PrismaClient } = require("@prisma/client");
-const upload = require("../../middlewares/fileUpload");
 
 const prisma = new PrismaClient();
 
 router.post("/cadastrar", upload.single("foto"), async (req, res, next) => {
   try {
     console.log(req.body);
+    console.log(req.file); // Adicione este log para verificar o arquivo
 
     const nome = req.body.nome;
     const cpf = req.body.cpf;
     const rg = req.body.rg;
-    const usuario_id = Number(req.body.usuario_id)
+    const usuario_id = Number(req.body.usuario_id);
     const email = req.body.email;
     const saldo = req.body.saldo;
     const tipo = req.body.tipo;
     const carteira = req.body.carteira;
     const sexo = req.body.sexo;
     const telefone = req.body.telefone;
-    const foto = req.file?.path;
+    const foto = req.file ? `/uploads/${req.file.filename}` : null;
     const nascimento = req.body.nascimento ? new Date(req.body.nascimento).toISOString() : null;
 
     const data = {
@@ -32,13 +53,12 @@ router.post("/cadastrar", upload.single("foto"), async (req, res, next) => {
 
     const cliente = await prisma.cliente.create({ data: data });
 
-    res.json(cliente)
+    res.json(cliente);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ mensagem: "Não foi possível realizar o cadastro do Cliente." });
+    res.status(500).json({ error: "Erro ao cadastrar cliente" });
   }
 });
-
 
 router.get("/listar", async function (req, res, next) {
   const clientes = await prisma.cliente.findMany({
